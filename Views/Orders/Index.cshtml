@@ -1,0 +1,35 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    var Orders = (List<Orders>)ViewData["Orders"];
+    var Pizza = (List<Pizza>)ViewData["Pizza"];
+    var count = ViewData["count"];
+    var sum = ViewData["sum"];
+
+
+}
+@TempData.Peek("Address");
+<p>
+    
+    @foreach (var item in Orders)
+    {
+        <p>        
+                @item.Order_ID
+        </P>
+     }
+</p>
+<p>
+    @foreach(var item in Pizza)
+            {<p>
+                @item.Name 
+                @item.Price
+                
+             </p>
+            }
+<p>
+    @count
+    @sum
+ 
+ </p>
+</p>
